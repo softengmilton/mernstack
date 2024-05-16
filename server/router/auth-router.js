@@ -1,6 +1,6 @@
 const express= require("express");
 const router=express.Router();
-const {home , login} = require('../controllers/auth-controller');
+const authcontroller = require('../controllers/auth-controller');
 
 
 router.get("/", (req,res)=>{
@@ -10,8 +10,8 @@ router.get("/", (req,res)=>{
 });
 
 
-router.route("/hello").get(home);
-router.route('/login').get(login);
+router.route("/hello").get(authcontroller.home);
+router.route('/login').get(authcontroller.login);
 
 
 
