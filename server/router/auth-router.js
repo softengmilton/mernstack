@@ -1,6 +1,6 @@
 const express= require("express");
 const router=express.Router();
-const authcontroller = require('../controllers/auth-controller');
+const AuthController = require('../controllers/AuthController');
 
 
 router.get("/", (req,res)=>{
@@ -10,16 +10,19 @@ router.get("/", (req,res)=>{
 });
 
 
-router.route("/hello").get(authcontroller.home);
-router.route('/login').get(authcontroller.login);
+router.route("/").get(AuthController.home);
+router.route('/login').get(AuthController.login);
+router.route('/register').post(AuthController.register);
+
+
 
 
 
 // here i can use get ,put ,delete all by concataning 
-router.route("/register").get((req, res)=>{
-    res.status(200).send("welcome to register")
+// router.route("/register").get((req, res)=>{
+//     res.status(200).send("welcome to regiter")
 
-})
+// })
 
 
 

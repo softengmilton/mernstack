@@ -21,9 +21,23 @@ const login = async (req,res)=>{
      
 }
 
+//register 
+
+const register = async (req, res)=>{
+    try {
+
+        console.log(req.body);
+        res.status(200).json({message: req.body});
+    } catch (error) {
+
+        console.error("error hl");
+        
+    }
+
+}
 
 
 
 
 
-module.exports= {home,login};
+module.exports= {home,login,register};
