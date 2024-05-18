@@ -1,3 +1,4 @@
+//home
 const home = async (req, res)=>{
     try {
         res.status(200).send("Welcome to home");
@@ -30,7 +31,7 @@ const register = async (req, res)=>{
         res.status(200).json({message: req.body});
     } catch (error) {
 
-        console.error("error hl");
+        console.error("error");
         
     }
 
