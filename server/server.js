@@ -1,3 +1,4 @@
+require("dotenv").config();                 //Have to include dontenv
 const express= require("express");          // get all power from express 
 const app= express();
 const router = require("./router/auth-router") //include router file
